@@ -11,7 +11,7 @@ def main():
     results = evaluate_model_cv(
         X=X,
         y=y,
-        model_name="linear_regression",
+        model_name="ridge",
         n_splits=5,
         n_jobs=1,
     )

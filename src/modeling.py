@@ -17,7 +17,7 @@ from sklearn.dummy import DummyRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.impute import SimpleImputer
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
@@ -196,6 +196,9 @@ def get_models() -> dict[str, object]:
         ),
 
         "linear_regression": LinearRegression(),
+        "ridge": Ridge(
+            alpha=1.0,
+        ),
 
         "random_forest": RandomForestRegressor(
             n_estimators=300,
